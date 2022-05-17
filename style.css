@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    width: 450px;
+    min-height: 300px;
+}
+
+.page {
+    width: 450px;
+    min-height: 300px;
+    padding: 2rem;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    animation: FadeOut 0.5s ease forwards;
+    position: absolute;
+}
+
+.page.active {
+    animation: slideIn 0.5s 0.15s ease both;
+    z-index: 10;
+}
+
+.page h2 {
+    text-align: center;
+    margin: 0;
+}
+
+.page ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 20px 0;
+    font-size: 1.3rem;
+}
+
+li label,
+li input {
+    cursor: pointer;
+}
+
+@keyframes FadeOut {
+    50% {
+        transform: scale(1.01);
+    }
+
+    100% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+}
+
+@keyframes FadeIn {
+    50% {
+        transform: scale(1.01);
+    }
+
+    100% {
+        transform: scale(0.95);
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    70% {
+        transform: translateX(-10%);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        opacity: 1;
+        transform: translateX(100%);
+    }
+
+    20% {
+        transform: translateX(-10%);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+}

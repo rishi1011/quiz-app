@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Project</title>
+    <script src="https://kit.fontawesome.com/ff64e45630.js" crossorigin="anonymous" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="quiz-container">
+        <div class="page active">
+            <h2 class="question-text">Which language runs in a web browser?</h2>
+            <ul class="choices">
+                <li><input type="radio" name="answer" id="a"><label for="a" class="a_text">Java</label>
+                </li>
+                <li><input type="radio" name="answer" id="b"><label for="b" class="b_text">C</label></li>
+                <li><input type="radio" name="answer" id="c"><label for="c" class="c_text">Python</label></li>
+                <li><input type="radio" name="answer" id="d"><label for="d" class="d_text">Javascript</label></li>
+            </ul>
+            <button class="next" data-next>Next</button>
+        </div>
+        <div class="page">
+            <h2 class="question-text">What does CSS stand for?</h2>
+            <ul class="choices">
+                <li><input type="radio" name="answer" id="a"><label for="a" class="a_text">Central Style Sheets</label>
+                </li>
+                <li><input type="radio" name="answer" id="b"><label for="b" class="b_text">Cascading Style Sheets</label></li>
+                <li><input type="radio" name="answer" id="c"><label for="c" class="c_text">Cascading Simple Sheets</label></li>
+                <li><input type="radio" name="answer" id="d"><label for="d" class="d_text">Cars SUVs Sailboats</label></li>
+            </ul>
+            <button class="previous" data-previous>Previous</button>
+            <button class="next" data-next>Next</button>
+        </div>
+        <div class="page">
+            <h2 class="question-text">What does HTML stand for?</h2>
+            <ul class="choices">
+                <li><input type="radio" name="answer" id="a"><label for="a" class="a_text">Hypertext Markup Language</label>
+                </li>
+                <li><input type="radio" name="answer" id="b"><label for="b" class="b_text">Hypertext Markdown Language</label>
+                </li>
+                <li><input type="radio" name="answer" id="c"><label for="c" class="c_text">Hyperloop Machine Language</label>
+                </li>
+                <li><input type="radio" name="answer" id="d"><label for="d" class="d_text">Helicopters Terminals Motorboats
+                        Lamborginis</label></li>
+            </ul>
+            <button class="next" data-previous>Previous</button>
+            <button class="next" data-next>Next</button>
+        </div>
+        <div class="page">
+            <h2 class="question-text">What year was JavaScript launched?</h2>
+            <ul class="choices">
+                <li><input type="radio" name="answer" id="a"><label for="a" class="a_text">1996</label>
+                </li>
+                <li><input type="radio" name="answer" id="b"><label for="b" class="b_text">1995</label></li>
+                <li><input type="radio" name="answer" id="c"><label for="c" class="c_text">1994</label></li>
+                <li><input type="radio" name="answer" id="d"><label for="d" class="d_text">None of the above.</label></li>
+            </ul>
+            <button class="next" data-previous>Previous</button>
+            <button class="next">Submit</button>
+        </div>
+    </div>
+</body>
+
+</html>
