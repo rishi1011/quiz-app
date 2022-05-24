@@ -36,6 +36,14 @@ const quizData = [
 const quizContainer = document.querySelector('.quiz-container');
 const pages = [...document.querySelectorAll('.page')];
 
+setTimeout(makePagesVisible, 0);
+
+function makePagesVisible() {
+    pages.forEach(page => {
+        page.style.opacity = '1';
+    });
+}
+
 let currentStep = pages.findIndex(page => page.classList.contains('active'));
 
 if (currentStep < 0) {
