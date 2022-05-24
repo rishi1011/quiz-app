@@ -55,13 +55,24 @@ quizContainer.addEventListener('click', (e) => {
 
     if (e.target.matches('[data-next]')) {
         incrementor = 1;
+        const page = pages[currentStep];
+        page.style.animation = `FadeOut 0.5s ease forwards`;
+        currentStep += incrementor;
+        const nextPage = pages[currentStep];
+        nextPage.style.animation = `slideIn 0.5s 0.5s ease both`;
     } else if (e.target.matches('[data-previous]')) {
         incrementor = -1;
+        const page = pages[currentStep];
+        currentStep += incrementor;
+        const nextPage = pages[currentStep];
+        nextPage.style.animation = `FadeIn 0.5s 0.5s ease both`;
+        page.style.animation = `slideOut 0.5s ease forwards`;
     }
+
+    
 
     if (incrementor === 0) return;
 
-    currentStep += incrementor;
     showCurrentStep();
 });
 
